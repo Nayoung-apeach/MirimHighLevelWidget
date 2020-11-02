@@ -14,13 +14,6 @@
         android:gravity="center_horizontal"
         android:format="* 에약에 걸린시간 : %s"
         />
-    <Button
-        android:id="@+id/btn_start"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="예약 시작"
-        />
     <RadioGroup
         android:id="@+id/radio_group"
         android:layout_width="wrap_content"
@@ -40,8 +33,9 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <CalendarView
-            android:id="@+id/calendar1"
+        <DatePicker
+            android:id="@+id/date_pick"
+            android:datePickerMode="spinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <TimePicker
@@ -57,17 +51,12 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         >
-        <Button
-            android:id="@+id/btn_stop"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="예약종료"
-            />
         <TextView
             android:id="@+id/text_result"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="15sp"
+            android:text="0000년 00월 00일 00시 00분"
             />
     </LinearLayout>
 </LinearLayout>
